@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Care 101 - Contact &amp; Feedback</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <div class="logo">Cat Care 101</div>
+    <button id="theme-toggle" type="button" class="theme-toggle">Toggle Dark Mode</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Cat Basics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact &amp; Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-intro">
+      <h1>Contact &amp; Feedback</h1>
+      <p>If this were a real site, you could send questions or share your own cat tips here.</p>
+      <p>For this class project, use the form below to test that your POST request works correctly.</p>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-info">
+        <h2>Before You Send</h2>
+        <ul>
+          <li>This form is for practice only.</li>
+          <li>Use simple test data when you submit it.</li>
+          <li>You can check the Google Sheet to see your submission.</li>
+        </ul>
+
+        <div class="color-block">
+          <h3>Privacy Note</h3>
+          <p>Do not enter any real passwords or private information. This is just a school assignment.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form
+          class="contact-form"
+          method="post"
+          action="https://script.google.com/macros/s/AKfycbz6cewkwC6P68-qotOokhBb_v1Zxr3aozRItX-rFramd4p_7R3XzwHLj7o1mN-6Okez/exec"
+        >
+          <div class="form-row">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="general">General Question</option>
+              <option value="feeding">Feeding</option>
+              <option value="litter">Litter &amp; Hygiene</option>
+              <option value="play">Play &amp; Enrichment</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <span>Do you currently have a cat?</span>
+            <label>
+              <input type="radio" name="has_cat" value="yes" checked>
+              Yes
+            </label>
+            <label>
+              <input type="radio" name="has_cat" value="no">
+              No
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <input type="checkbox" name="newsletter" value="yes">
+              I would like to receive cat care tips (for demo purposes).
+            </label>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="primary-button">Submit Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Cat Care 101. School project demo site.</p>
+  </footer>
+</body>
+</html>
