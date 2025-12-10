@@ -222,6 +222,19 @@ main {
   display: none;
 }
 
+/* ========= IMAGE SIZING ========= */
+/* Make all main images share the same frame size so cards look consistent */
+
+.card img,
+.about-block img,
+.gallery-item img {
+  width: 100%;
+  height: 170px;      /* try 160–180px; lower = shorter, more rectangular */
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
 /* HOME PAGE */
 
 .home-main {
@@ -246,11 +259,13 @@ main {
   margin-top: 0.5rem;
 }
 
-/* Hero image */
-
+/* Hero image (can be a bit taller) */
 .hero-image img {
+  width: 100%;
   max-width: 100%;
   border-radius: 0.75rem;
+  height: auto; /* let the hero image keep its own aspect ratio */
+  object-fit: cover;
 }
 
 /* Home grid – GRID LAYOUT #1 */
@@ -271,11 +286,6 @@ main {
   flex-direction: column;
   gap: 0.5rem;
   position: relative; /* relative positioning requirement */
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 0.5rem;
 }
 
 .badge {
@@ -321,11 +331,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-.about-block img {
-  max-width: 100%;
-  border-radius: 0.5rem;
 }
 
 .about-block table {
@@ -374,12 +379,6 @@ main {
   border-radius: 0.75rem;
   border: 1px solid #ddd;
   padding: 0.75rem;
-}
-
-.gallery-item img {
-  max-width: 100%;
-  display: block;
-  border-radius: 0.5rem;
 }
 
 .gallery-caption {
@@ -493,6 +492,6 @@ main {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
